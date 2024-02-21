@@ -1,5 +1,6 @@
 #include "Autoutilitara.h"
 #include <iostream>
+#include <string>
 
 Autoutilitara::Autoutilitara( const std::string combustibil, const std::string caroserie, const std::string tractiune, int putere, const std::string echipare, int* vin)
 	: Automobil( combustibil, caroserie, tractiune, putere, echipare, vin) {      
@@ -12,6 +13,17 @@ Autoutilitara& Autoutilitara::operator=(const Autoutilitara& other)//Operator de
 {
 	if (this != &other) {
 		Automobil::operator=(other);
+	}
+	return *this;
+}
+
+Autoutilitara::Autoutilitara(Autoutilitara&& other)
+	:Automobil(std::move(other)){}
+
+Autoutilitara& Autoutilitara::operator=(Autoutilitara&& other)
+{
+	if (this != &other) {
+		Automobil::operator=(std::move(other));
 	}
 	return *this;
 }

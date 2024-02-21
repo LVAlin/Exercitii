@@ -4,6 +4,7 @@
 #include "Automobil.h"
 
 int main() {
+	/*
 	int* vinAutoturism = new int(123456); //VIN pentru masina autoturism
 	Autoturism autoturism1("Benzina", "Berlina", "Fata", 130, "Standard", vinAutoturism);
 
@@ -18,6 +19,7 @@ int main() {
 	std::cout << "\n";
     autoturism3.afiseazaInfo();
 	std::cout << "\n";
+    */
 
 	/* 
 	int* vinAutoutilitara = new int(654321); //VIN pentru masina autoutilitara
@@ -35,5 +37,18 @@ int main() {
 	autoutilitara3.afiseazaInfo();
 	std::cout << "\n"; 
 	*/
+
+    int* vinAutoturism = new int(123456); //VIN pentru masina autoturism
+	Autoturism autoturism("Benzina", "Berlina", "Fata", 130, "Standard", vinAutoturism);
+
+	int* vinAutoutilitara = new int(654321); //VIN pentru masina autoutilitara
+	Autoutilitara autoutilitara("Motorina", "Duba", "Spate", 150, "Full", vinAutoutilitara);
+
+	autoturism.afiseazaInfo();
+	std::cout << "\n";
+
+    autoutilitara.afiseazaInfo();
+	std::cout << "\n";
+
 	return 0;
 }

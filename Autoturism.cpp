@@ -1,5 +1,6 @@
 #include "Autoturism.h"
 #include <iostream>
+#include <string>
 
 Autoturism::Autoturism(const std::string combustibil, const std::string caroserie,const std::string tractiune, int putere,const std::string echipare, int* vin)
 	: Automobil( combustibil, caroserie, tractiune, putere, echipare, vin) {
@@ -13,6 +14,17 @@ Autoturism& Autoturism::operator=(const Autoturism& other)//Operator de atribuir
 {
 	if (this != &other) {
 		Automobil::operator=(other);
+	}
+	return *this;
+}
+
+Autoturism::Autoturism(Autoturism&& other)
+	:Automobil(std::move(other)){}
+
+Autoturism& Autoturism::operator=(Autoturism&& other)
+{
+	if (this != &other) {
+		Automobil::operator=(std::move(other));
 	}
 	return *this;
 }
