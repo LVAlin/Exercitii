@@ -13,4 +13,5 @@ public:
 	Automobil(std::string combustibil, std::string caroserie, std::string tractiune, int putere, std::string echipare, int* vin);
 	virtual ~Automobil();
 	virtual void afiseazaInfo() const = 0;
+	void updateMembers(std::string combustibil, std::string caroserie, std::string tractiune, int putere, std::string echipare, int* vin);
 };
