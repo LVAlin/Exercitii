@@ -15,21 +15,6 @@ void Autoutilitara::afiseazaInfo() const {
 	std::cout << "Echipare: " << Echipare << std::endl;
 	std::cout << "VIN: " << *Vin << std::endl;
 }
-
-void Autoutilitara::afiseazaMesajUtilitar(const std::string& mesaj){
-	std::cout << "Mesaj utilitar Autoutilitara: " << mesaj << std::endl;
-}
-
-double Autoutilitara::calculMedieUtilitar(const std::vector<int>& valori) {
-	if (valori.empty()){
-		return 0.0;
-	}
-	int sum = 0;
-	for(int numar : valori){
-		sum +=numar;
-	}
-	return static_cast<double>(sum) / valori.size();
-}
 Autoutilitara::~Autoutilitara() {
 	std::cout << "Apelare Destructor Autoturism " << std::endl;
 }
